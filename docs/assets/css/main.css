@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline|Cinzel+Decorative:400,700,900|Londrina+Outline|Press+Start+2P&display=swap");
+
+/* 
+font-family: 'Bungee Inline', cursive;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Londrina Outline', cursive;
+font-family: 'Press Start 2P', cursive; 
+*/
+
+* {
+  font-family: "Bungee Inline", cursive;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #050c0f;
+}
+
+section h1 {
+  text-shadow: 0 0 20px #ff0000;
+}
+
+#logo {
+  max-width: 100px;
+}
+
+.center {
+  text-align: center;
+}
+
+.r-glow {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 60px 30px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(255, 0, 255),
+    /* middle magenta */ 0 0 140px 90px rgb(255, 0, 0); /* outer cyan */
+}
+
+.g-glow {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 60px 30px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(166, 255, 0),
+    /* middle magenta */ 0 0 140px 90px rgb(81, 255, 0); /* outer cyan */
+}
+
+.b-glow {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 60px 30px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(255, 0, 255),
+    /* middle magenta */ 0 0 140px 90px rgb(0, 60, 255); /* outer cyan */
+}
+
+.y-glow {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 60px 30px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(255, 251, 0),
+    /* middle magenta */ 0 0 140px 90px rgb(255, 238, 0); /* outer cyan */
+}
+
+.o-glow {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 60px 30px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(255, 153, 0),
+    /* middle magenta */ 0 0 140px 90px rgb(255, 195, 83); /* outer cyan */
+}
+
+.p-glow {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 60px 30px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(255, 0, 255),
+    /* middle magenta */ 0 0 140px 90px rgb(212, 0, 255); /* outer cyan */
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/* back image */
+#bg-image {
+  background-image: url("https://sharadcodes.github.io/the-game-of-infinity-stones/assets/img/back3.jpg");
+  height: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.t-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.t-bg-2 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* GAME GRID */
+
+#game-grid {
+  border: rgb(255, 255, 255) 2px dotted;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 2rem;
+  max-width: 60%;
+  margin: 40px 40px 30px 40px;
+}
+
+#game-grid img {
+  max-width: 2rem;
+  margin: auto auto;
+  transition-duration: 0.5s;
+}
+
+#game-grid > img:hover {
+  cursor: pointer;
+  border-radius: 100%;
+  /* background-color: rgba(255, 255, 255, 0.781);
+  box-shadow:
+      0 0 60px 30px rgb(255, 255, 255),  
+      0 0 100px 60px rgb(255, 255, 255), 
+      0 0 140px 90px rgb(255, 255, 255);  */
+}
+
+/* SCORES GRID */
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  padding: 2rem;
+  margin: 0% 0% 0% 0%;
+  grid-gap: 2rem;
+}
+
+#score-grid {
+  border: rgb(255, 255, 255) 2px dotted;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  padding: 1rem;
+  grid-gap: 2rem;
+  max-width: 90%;
+  margin: 40px 40px 30px 0px;
+}
+
+#score-display {
+  padding: 2rem;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+#gauntlet {
+  max-width: 12.5rem;
+  padding: 2rem;
+}
+
+#message {
+  padding: 2rem;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #game-grid {
+    border: rgb(255, 255, 255) 2px dotted;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 100%;
+    margin: 0px;
+  }
+
+  #game-grid img {
+    max-width: 2rem;
+    margin: auto auto;
+    transition-duration: 0.5s;
+  }
+
+  #game-grid > img:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    /* background-color: rgba(255, 255, 255, 0.781);
+  box-shadow:
+      0 0 60px 30px rgb(255, 255, 255),  
+      0 0 100px 60px rgb(255, 255, 255), 
+      0 0 140px 90px rgb(255, 255, 255);  */
+  }
+
+  /* SCORES GRID */
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    padding: 2rem;
+    grid-gap: .1rem;
+    margin-top: .5rem;
+  }
+
+  #score-grid {
+    border: rgb(255, 255, 255) 2px dotted;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: inline;
+    grid-gap: 2rem;
+    max-width: 100%;
+    margin: 50px 0px 0px 0px;
+  }
+
+  #gauntlet {
+    margin: auto 0px;
+  }
+
+  #message {
+    color: aliceblue;
+  }
+
+  #score-display {
+    padding: 2rem;
+    color: aliceblue;
+    font-size: 20px;
+  }
+}
