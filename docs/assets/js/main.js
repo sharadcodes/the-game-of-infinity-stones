@@ -100,17 +100,16 @@ for (i = 1; i <= 25; i++) {
 
 var score = 0;
 index = 1;
+count_chances = 1;
 $(document).ready(function() {
   $(
     "#gem1,#gem2,#gem3,#gem4,#gem5,#gem6,#gem7,#gem8,#gem9,#gem10,#gem11,#gem12,#gem13,#gem14,#gem15,#gem16,#gem17,#gem18,#gem19,#gem20,#gem21,#gem22,#gem23,#gem24,#gem25"
   ).click(function() {
+    if(count_chances < 16){
     id_number = $(this).attr("value");
     // console.log(gem_value[id_number]);
     if (index <= 10 && gem_value[id_number] === 1) {
       score++;
-      document.getElementById(
-        "score-display"
-      ).innerText = `YOU HAVE ${score} INFINTY STONES`;
       document.getElementById("message").innerText = `YOU HAVE EARNED THE ${
         name_of_stones[index]
       } STONE`;
@@ -129,10 +128,19 @@ $(document).ready(function() {
         g.play();
 
         document.getElementById("message").innerText =
-          "YOU ARE THE SPREME YOU HAVE THE 6 INFINITY STONES";
+          "YOU ARE SPREME YOU HAVE THE 6 INFINITY STONES";
       }
     } else {
       $(this).addClass("hide");
     }
+    document.getElementById("score-display").innerText = `YOU HAVE USED ${count_chances} LIFE[s]`;
+    count_chances++;
+  }
+  else{
+    var r = confirm("You failed to earn all the stones!");
+    if (r == true){
+      window.location.reload();
+    }
+  }
   });
 });
